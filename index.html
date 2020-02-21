@@ -1,56 +1,124 @@
 <!DOCTYPE html>
-<head>
-	<!-- META -->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Jeff Batterton</title>
-	<meta name="robots" content="all" />
-	<meta property="og:url" content="http://jeffbatterton.github.io/jeffbatterton.com/" />
-  	<meta property="og:title" content="Jeff Batterton" />
-  	<meta property="og:description" content="Jeff Batterton makes things at Anedot" />
-	<meta name="twitter:card" content="summary_large_image" />
-  	<meta name="twitter:site" content="@jeffbatterton" />
-  	<meta name="twitter:creator" content="@jeffbatterton" />
-  	<meta name="twitter:title" content="Jeff Batterton" />
-  	<meta name="twitter:description" content="Jeff Batterton makes things at Anedot" />
-	<!-- CSS -->
-	<style type="text/css">
-		a {
-			color: #999;
-		}
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Jeff Batterton</title>
+		<meta name="robots" content="all" />
+		<meta property="og:url" content="http://jeffbatterton.com/" />
+	  <meta property="og:title" content="Jeff Batterton" />
+	  <meta property="og:description" content="Jeff Batterton makes things at Anedot" />
+		<meta name="twitter:card" content="summary_large_image" />
+	  <meta name="twitter:site" content="@jeffbatterton" />
+	  <meta name="twitter:creator" content="@jeffbatterton" />
+	  <meta name="twitter:title" content="Jeff Batterton" />
+	  <meta name="twitter:description" content="Jeff Batterton is a Product Designer at Anedot" />
+		<style>
+			* {
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+			}
 
-		article {
-			bottom: 40px;
-			left: 40px;
-			position: absolute;
-		}
+			a {
+				color: #fff;
+				border-bottom: 4px solid #75AAED;
+	    	text-decoration: none;
+				transition: border .125s ease-in-out;
+			}
 
-		h1 {
-			color: #333;
-			font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-			font-weight: 600;
-			margin: 0 0 5px 0;
-		}
+			a:hover {
+				border-bottom-width: 8px;
+			}
 
-		p {
-			color: #999;
-			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-			font-weight: 300;
-			margin: 0;
-		}
+			article {
+				align-self: flex-end;
+				margin: 15.458937198vw;
+			}
 
-		p + p {
-			margin: 20px 0 0;
-		}
-	</style>
-	<!-- FAVICON -->
-	<link rel="icon" type="image/png" href="/jeffbatterton.com/favicon.png" />
-	<!-- IOS -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-</head>
-<body>
-	<article>
-		<h1>Jeff Batterton</h1>
-		<p>I make things at <a href="https://anedot.com">Anedot</a>.</p>
-	</article>
-</body>
+			body {
+			  align-items: center;
+				display: flex;
+				height: 100%;
+				margin: 0;
+			}
+
+			h1, h2 {
+				color: #fff;
+				line-height: 1.25;
+				font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-size: 5.555555556vw;
+				font-weight: bold;
+				margin: 0 0 .9661835749vw 0;
+			}
+
+			h2 {
+				font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+				font-weight: normal;
+				margin-bottom: 7.729468599vw;
+			}
+
+			html {
+				background-color: #5395E9;
+				height: 100%;
+				padding: 0;
+			}
+
+			img {
+				height: 2.777777778vw;
+				min-height: 16px;
+				width: auto;
+			}
+
+			.r {
+				letter-spacing: 1px;
+			}
+
+			.t1 {
+				letter-spacing: -2px;
+			}
+
+			@media only screen and (min-width: 769px) {
+				article {
+					align-self: normal;
+					align-items: flex-start;
+					display: flex;
+					flex-direction: column;
+					height: 67.32026144vh;
+					margin: 32.67973856vh 0 0 38.20224719vw;
+				}
+
+				h1 {
+					flex-grow: 0;
+				}
+
+				h2 {
+					flex-grow: 1;
+				}
+
+				img {
+					flex-grow: 0;
+					margin-bottom: 2.777777778vw;
+				}
+			}
+
+			@media only screen and (min-width: 1367px) {
+				h1, h2 {
+					font-size: 80px;
+				}
+
+				img {
+					height: 40px;
+				}
+			}
+
+		</style>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	</head>
+	<body>
+		<article>
+			<h1>Jeff Ba<span class="t1">t</span>te<span class="r">r</span>ton</h1>
+			<h2>Product Designer<br>at <a href="https://anedot.com">Anedot</a></h2>
+			<img alt="Jeff Batterton is a Product Designer for Anedot." src="logomark.svg">
+		</article>
+	</body>
 </html>
