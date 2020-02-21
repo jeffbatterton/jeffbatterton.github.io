@@ -1,0 +1,302 @@
+@import 						"http://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic";
+
+// Colours
+@white 							: #fff;
+@black 							: #000;
+@blue							: #0087f7; 
+@lightblue 						: #37c1f6;
+@darkgray						: #333;
+@lightgray						: #e6e6e6;
+
+// Pillars
+html							{ padding: 0; }
+body							{ margin: 0; font-family: Lato, Helvetica, sans-serif; font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+// Text
+h1								{ font: 700 150%/100% Lato, Helvetica, sans-serif; color: @darkgray; margin: 0 0 20px 0; }
+h2								{ font: 700 112.5%/150% Lato, Helvetica, sans-serif; color: @darkgray; margin: 0 0 20px 0; }
+h3								{ font: 700 100%/112.5% Lato, Helvetica, sans-serif; color: @darkgray; margin: 0 0 20px 0; }
+p 								{ font: 300 87.5%/135% Lato, Helvetica, sans-serif; color: @darkgray; margin: 0 0 20px 0;
+	&:last-child				{ margin-bottom: 0; }
+	&.pull-quote				{ font-size: 112.5%; line-height: 150%; position: relative; font-style: italic;
+		b						{ display: block; font-style: normal; font-size: 75%; line-height: 75%; margin-top: 15px; }
+		em						{ display: block; font-style: normal; font-size: 60%; line-height: 20px; }
+	}
+}
+h2 + p 							{ margin-top: -10px; }
+a								{ color: @blue; text-decoration: none; transition: all .125s linear;
+	&:hover						{ color: darken(@blue, 20%); }
+}
+
+// Layout
+.wrapper						{ padding: 40px; position: relative; }
+
+// Modifiers
+.landing						{ height: 100%; background: @lightgray -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0, .25) 50%, rgba(0,0,0,0)); background: @lightgray -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0, .25) 50%, rgba(0,0,0,0));
+	.intro						{ background: @blue -webkit-linear-gradient(-95deg, @lightblue, @blue); position: relative; background: @blue -moz-linear-gradient(-95deg, @lightblue, @blue); position: relative;
+		h2						{ background: url(../img/logo.svg) no-repeat center top; position: absolute; left: 50%; top: 50%; margin-left: -121px; width: 242px; color: @white; font-weight: 300; padding-top: 75px; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%);
+			b 					{ font-weight: 700; }
+		}
+	}
+	.feature					{ position: relative; background-color: @black; background-repeat: no-repeat; background-position: center; background-size: cover; 
+		.wrapper				{ height: 100%; }
+		&:before				{ content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: -webkit-linear-gradient(top, rgba(0,0,0, .75), rgba(0,0,0, .25)); background: -moz-linear-gradient(top, rgba(0,0,0, .75), rgba(0,0,0, .25)); }
+		&:after					{ content: ""; position: absolute; height: 88px; right: 0; bottom: 0; left: 0; background: -webkit-linear-gradient(bottom, rgba(0,0,0, .75), rgba(0,0,0, 0)); background: -moz-linear-gradient(bottom, rgba(0,0,0, .75), rgba(0,0,0, 0)); }
+		.info					{ position: relative; z-index: 1;
+			h2					{ color: @white; font-weight: 300; margin: 0 0 20px 0;
+				b 				{ font-weight: 700; }
+			}
+			a					{ color: @white; display: block; font-size: 112.5%; line-height: 112.5%; font-weight: 700; text-align: center; padding: 10px 40px; border-radius: 2px; border: 1px solid @white; background: rgba(255,255,255, .125); transition: all .125s linear;
+				&:hover			{ background: rgba(255,255,255, .25); }
+			}
+		}
+		.screen					{ position: absolute; bottom: 0; right: 40px; left: 40px; height: 50%; 
+			img 				{ width: 100%; height: auto; box-shadow: 0 5px 100px rgba(0,0,0, .95); border-radius: 2px; }
+		}
+	}
+}
+.process						{ background: @blue;
+	& *							{ color: @white; }
+	ul							{ margin: 0; padding: 0; list-style: none;
+		//li						{ margin: 0 0 20px 0; min-height: 140px; background: url(../img/devise.svg) no-repeat right top;
+		li						{ margin: 0 0 20px 0; min-height: 140px; overflow: hidden;
+			img					{ float: right; margin: 0 0 0 20px; }
+			h2					{ margin: 0 0 5px 0; }
+			p 					{ margin: 0; }
+		}
+	}
+}
+.brands							{ margin: 0; padding: 0; list-style: none; -webkit-column-count: 2; -webkit-column-gap: 40px; -moz-column-count: 2; -moz-column-gap: 40px;
+	img 						{ width: 100%; height: auto; opacity: .2; }
+}
+.contact						{ background: @lightgray;
+	.contact-card				{ background: @white; padding: 20px; border-radius: 2px; margin-bottom: 20px;
+		ul						{ margin: 0; padding: 0; list-style: none;
+			li					{ font-weight: 700; font-size: 75%; border-bottom: 1px solid lighten(@lightgray, 5%); margin-bottom: 10px; padding: 0 0 5px 0;
+				a				{ display: block; font-size: 112.5%; color: @darkgray; margin-top: 3px; background-repeat: no-repeat; background-position: right center;
+					span		{ font-weight: 300; display: block; color: @darkgray; }
+					&.email		{ background-image: url(../img/icon-email.svg); }
+					&.twitter	{ background-image: url(../img/icon-twitter.svg); }
+					&.facebook	{ background-image: url(../img/icon-facebook.svg); }
+					&.dribbble	{ background-image: url(../img/icon-dribbble.svg); }
+					&.instagram	{ background-image: url(../img/icon-instagram.svg); }
+				}
+				&:last-child	{ border: 0; margin: 0; padding: 0;
+					a			{ color: @blue; font-weight: 300;
+						&:hover	{ color: darken(@blue, 20%); }
+					}
+				}
+			}
+		}
+	}
+}
+.copyright						{ font-size: 75%; text-align: center;
+	span						{ display: block; color: lighten(@darkgray, 40%); }
+}
+.project-title					{ position: relative; background: @black; background-position: center; background-repeat: no-repeat; -webkit-background-size: cover; -moz-background-size: cover;
+	&:before					{ content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: -webkit-linear-gradient(bottom, rgba(0,0,0, .75), rgba(0,0,0, .25)); background: -moz-linear-gradient(bottom, rgba(0,0,0, .75), rgba(0,0,0, .25)); }
+	a 							{ display: block; height: 44px; width: 44px; background: url(../img/logo-jeffbatterton.svg) no-repeat; opacity: .5; text-indent: -9999px; }
+	h1 							{ color: @white; margin: 100px 0 0 0; font-size: 250%;
+		span					{ font-weight: 300; }
+	}
+	&.listing					{ background: @blue;
+		&:before				{ display: none; }
+	}
+}
+.portfolio						{
+	img							{ max-width: 480px; width: 100%; }
+	h1							{ margin-top: 40px; }
+}
+.portfolio						{
+	a 							{ position: relative; display: block; background-color: @black; -webkit-background-size: cover; -moz-background-size: cover; padding: 60px 20px 20px 20px; margin: 0 0 40px 0;
+		&:before				{ content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: -webkit-linear-gradient(bottom, rgba(0,0,0, .75), rgba(0,0,0, .25)); background: -moz-linear-gradient(bottom, rgba(0,0,0, .75), rgba(0,0,0, .25)); }
+		span					{ position: relative; z-index: 1; color: @white; font-size: 150%; font-weight: 700; display: block; }
+		&:hover					{ opacity: .75; }
+		&:last-child			{ margin: 0; }
+	}
+}
+
+.menustache						{ background-image: url(../img/feature-menustache.jpg); }
+.blacktie						{ background-image: url(../img/feature-blacktie.jpg); }
+.inservice-management			{ background-image: url(../img/feature-inservice.jpg); }
+.lifepoint-church				{ background-image: url(../img/feature-lifepoint.jpg); }
+.fourohfour						{ background-image: url(../img/feature-fourohfour.jpg); }
+
+// Generics
+::selection 					{ background: @black; color: @white; }
+::-moz-selection 				{ background: @black; color: @white; }
+.clearfix()						{ *zoom: 1;
+	&:before,
+	&:after 					{ display: table; content: ""; }
+	&:after 					{ clear: both; }
+}
+hr								{ border: 0; height: 1px; background: @lightgray; margin-bottom: 20px; }
+.list 							{ margin: 0; padding: 0 0 0 20px; list-style: none;
+	li							{ position: relative; font-size: 90%; color: @darkgray; margin: 0 0 5px 0;
+		&:before				{ content: ""; width: 8px; height: 8px; border-radius: 50%; background: @lightgray; position: absolute; top: 7px; left: -20px; }
+	}
+}
+
+// Breakpoints
+@media (min-width: 500px) 		{
+	.columns 					{ -webkit-column-count: 2; -webkit-column-gap: 40px; -moz-column-count: 2; -moz-column-gap: 40px;
+		&.brands				{ -webkit-column-count: 6; -webkit-column-gap: 20px; -moz-column-count: 6; -moz-column-gap: 20px; }
+	}
+	.landing					{
+		.feature				{
+			.info				{ width: 40%; margin-top: 15%;
+				a				{ display: inline-block; }
+			}
+			.screen				{ left: 55%; height: auto; top: 40px; }
+		}
+	}
+}
+@media (min-width: 1130px)		{
+	body						{ font-size: 18px; }
+	.wrapper					{ width: 1050px; margin: 0 auto; }
+	.columns.plus 				{ -webkit-column-count: 4; -moz-column-count: 4; }
+	.feature h2					{ font-size: 150%; }
+	
+}
+
+/*
+ * Swiper - Mobile Touch Slider CSS
+ * http://www.idangero.us/sliders/swiper
+ *
+ * Vladimir Kharlampidi, The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Copyright 2012-2013, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us
+ *
+ * Licensed under GPL & MIT
+ *
+*/
+
+/* ===============================================================
+Basic Swiper Styles 
+================================================================*/
+.swiper-container {
+	margin:0 auto;
+	position:relative;
+	overflow:hidden;
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+	/* Fix of Webkit flickering */
+	z-index:1;
+}
+.swiper-wrapper {
+	position:relative;
+	width:100%;
+	-webkit-transition-property:-webkit-transform, left, top;
+	-webkit-transition-duration:0s;
+	-webkit-transform:translate3d(0px,0,0);
+	-webkit-transition-timing-function:ease;
+	
+	-moz-transition-property:-moz-transform, left, top;
+	-moz-transition-duration:0s;
+	-moz-transform:translate3d(0px,0,0);
+	-moz-transition-timing-function:ease;
+	
+	-o-transition-property:-o-transform, left, top;
+	-o-transition-duration:0s;
+	-o-transform:translate3d(0px,0,0);
+	-o-transition-timing-function:ease;
+	-o-transform:translate(0px,0px);
+	
+	-ms-transition-property:-ms-transform, left, top;
+	-ms-transition-duration:0s;
+	-ms-transform:translate3d(0px,0,0);
+	-ms-transition-timing-function:ease;
+	
+	transition-property:transform, left, top;
+	transition-duration:0s;
+	transform:translate3d(0px,0,0);
+	transition-timing-function:ease;
+}
+.swiper-free-mode > .swiper-wrapper {
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	margin: 0 auto;
+}
+.swiper-slide {
+	float: left;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+	-ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+	-ms-touch-action: pan-x;
+}
+
+/* ===============================================================
+Your custom styles, here you need to specify container's and slide's
+sizes, pagination, etc.
+================================================================*/
+.swiper-container {
+	/* Specify Swiper's Size: */
+	height: 100%;
+	cursor: -webkit-grab;
+}
+.swiper-container:active {
+	cursor: -webkit-grabbing;
+}
+.swiper-slide {
+	/* Specify Slides's Size: */
+	height: 100%;
+	overflow: hidden;
+}
+.swiper-slide-active {
+	/* Specific active slide styling: */
+	
+}
+.swiper-slide-visible {
+	/* Specific visible slide styling: */	
+
+}
+/* ===============================================================
+Pagination Styles
+================================================================*/
+.swiper-pagination-switch {
+	/* Stylize pagination button: */	
+
+}
+.swiper-active-switch {
+	/* Specific active button style: */	
+	
+}
+.swiper-visible-switch {
+	/* Specific visible button style: */	
+	
+}
+
+.pagination {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255,255,255, .2);
+  margin-right: 5px;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+
